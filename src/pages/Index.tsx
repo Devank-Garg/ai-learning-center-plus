@@ -1,10 +1,10 @@
-
 import React from 'react';
 import { Search, BookOpen, Eye, ExternalLink, Star, Users, Clock } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const tutorialCategories = [
@@ -257,8 +257,16 @@ const Index = () => {
                 <CardContent>
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-white/60">{viz.type}</span>
-                    <Button variant="outline" className="border-white/20 text-white hover:bg-white/10">
-                      Explore
+                    <Button
+                      variant="outline"
+                      className="border-white/20 text-white hover:bg-white/10"
+                      asChild={viz.title === "Neural Network Playground"}
+                    >
+                      {viz.title === "Neural Network Playground" ? (
+                        <Link to="/neural-network-playground">Explore</Link>
+                      ) : (
+                        "Explore"
+                      )}
                     </Button>
                   </div>
                 </CardContent>
