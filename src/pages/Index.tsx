@@ -259,7 +259,7 @@ const Index = () => {
                     <span className="text-sm text-white/60">{viz.type}</span>
                     <Button
                       variant="outline"
-                      className="border-white/20 text-white hover:bg-white/10"
+                      className="border-white/20 text-gray-900 bg-white/80 hover:bg-white/10 hover:text-white"
                       asChild={viz.title === "Neural Network Playground"}
                     >
                       {viz.title === "Neural Network Playground" ? (
@@ -303,7 +303,7 @@ const Index = () => {
                     <Badge variant="outline" className="border-white/20 text-white">{resource.type}</Badge>
                     <Button 
                       variant="outline" 
-                      className="border-white/20 text-white hover:bg-white/10"
+                      className="border-white/20 text-gray-900 bg-white/80 hover:bg-white/10 hover:text-white"
                       onClick={() => window.open(resource.url, '_blank')}
                     >
                       Visit Resource
